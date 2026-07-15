@@ -1,0 +1,111 @@
+name: Demande de données
+description: Formulaire de demande au service IES / DRI Datalake
+title: "[Demande] "
+labels: ["demande"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de compléter ce formulaire. Les champs marqués d'un astérisque sont obligatoires.
+
+  - type: input
+    id: nom
+    attributes:
+      label: Nom et prénom
+      placeholder: Prénom Nom
+    validations:
+      required: true
+
+  - type: input
+    id: service
+    attributes:
+      label: Service
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description de la demande
+      description: Décrivez le besoin le plus précisément possible.
+    validations:
+      required: true
+
+  - type: input
+    id: delai
+    attributes:
+      label: Délai souhaité
+      placeholder: ex. fin septembre
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sources
+    attributes:
+      label: Type(s) de source à utiliser
+      description: Sélection multiple possible.
+      multiple: true
+      options:
+        - HAL
+        - BASTRI
+        - RADAR
+        - OpenAlex
+        - Autre
+    validations:
+      required: true
+
+  - type: input
+    id: source-autre
+    attributes:
+      label: Si « Autre » source, préciser
+    validations:
+      required: false
+
+  - type: input
+    id: rendu
+    attributes:
+      label: Type de rendu souhaité
+      placeholder: ex. carte interactive, tableau, graphique, export CSV, tableau de bord
+    validations:
+      required: true
+
+  - type: input
+    id: public
+    attributes:
+      label: Public cible envisagé
+    validations:
+      required: true
+
+  - type: dropdown
+    id: acces
+    attributes:
+      label: Accès envisagé
+      options:
+        - Ouvert
+        - Restreint
+    validations:
+      required: true
+
+  - type: input
+    id: acces-precision
+    attributes:
+      label: Si accès restreint, préciser à qui
+    validations:
+      required: false
+
+  - type: dropdown
+    id: projet
+    attributes:
+      label: Votre demande s'inscrit-elle dans le cadre d'un projet scientifique ?
+      options:
+        - Oui
+        - Non
+    validations:
+      required: true
+
+  - type: textarea
+    id: projet-precision
+    attributes:
+      label: Si oui, préciser le projet
+    validations:
+      required: false

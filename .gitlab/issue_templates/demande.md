@@ -21,7 +21,7 @@
 - [ ] Autre :
 
 ### Type de rendu souhaité
-<!-- ex : tableau, carte, graphique, export CSV, tableau de bord... -->
+<!-- ex : carte interactive, tableau, graphique, export CSV, tableau de bord -->
 
 
 ### Public cible envisagé
